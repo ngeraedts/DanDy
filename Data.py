@@ -1,4 +1,4 @@
-race_list = ["Dwarf", "Elf", "Halfling", "Human", "Gnome", "Half Elf", "Half Orc"] 
+race_list = ["Dwarf", "Elf", "Halfling", "Human", "Gnome", "Half Elf", "Half Orc"]
 class_list = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Sorcerer", "Rogue", "Wizard"]
 
 skill_list = {
