@@ -23,7 +23,7 @@ def getRace():
 		if 'Half ' in user_input:
 			input_race = user_input
 			clear()
-			user_input = str.title(input('Select a class\n(' + ls(class_list) + ')\n\n'))
+			user_input = str.title(input('Select a class: (' + ls(class_list) + ')\n\n'))
 			input_class = user_input
 		else:
 			input_race = user_input.split()[0]
@@ -31,7 +31,7 @@ def getRace():
 	elif len(user_input.split()) == 1:
 		input_race = user_input
 		clear()
-		user_input = str.title(input('Select a class\n(' + ls(class_list) + ')\n\n'))
+		user_input = str.title(input('Select a class: (' + ls(class_list) + ')\n\n'))
 		input_class = user_input
 	else:
 		input_race = random.choice(race_list)
