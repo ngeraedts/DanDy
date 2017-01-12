@@ -1,16 +1,21 @@
+import os
 import random
 from data import *
-from console import clear
 input_class = str()
 input_race = str()
 
+def clear():
+	if os.name == 'nt':
+		os.system('cls')
+	else:
+		os.system('clear')
 
 def ls(x):
 	return ', '.join(str(x) for x in x)
 
 def getRace():
 	clear()
-	user_input = str.title(input('Select a Race\n(' + ls(race_list) + ')\n\n[Enter] for random'))
+	user_input = str.title(input('Select a Race\n(' + ls(race_list) + ')\n\n[Enter] for random: '))
 	if len(user_input.split()) == 3:
 		input_race = user_input.split()[0] + ' ' + user_input.split()[1]
 		input_class = user_input.split()[2]
