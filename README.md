@@ -1,2 +1,2 @@
 # DanDy
-random character generator for 3.5 written in python 3.5
+Random character generator for D&D 3.5 for Python 3
