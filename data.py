@@ -1,3 +1,29 @@
+melee_weapons = [
+    "Club", "Dagger", "Javelin", "Light Mace", "Heavy Mace", "Short Spear", "Sickle",
+    "Spear", "Spiked Gauntlet", "Great Club", "Morningstar", "Quarterstaff", "Scythe"
+]
+ranged_weapons = [
+    "Light Crossbow", "Sling", "Heavy Crossbow"
+]
+
+armor = [
+    "Padded", "Leather", "Padded Leather", "Chain Shirt", "Hide", "Scalemail",
+    "Chainmail", "Breastplate", "Splintmail", "Bandedmail", "Half Plate"
+]
+shields = [
+    "Light Wooden", "Light Steel", "Heavy Wooden", "Heavy Steel", "Buckler"
+]
+
+religions = [
+    "Heironeous", "Moradin", "Yondalla", "Ehlonna", "Garl Glittergold", "Pelor",
+    "Corellon Larethian", "Kord", "Wee Jas", "St. Cuthbert", "Boccob", "Fharlanghn",
+    "Obad Hai", "Olidammara", "Hextor", "Nerull", "Vecna", "Erythnul", "Gruumsh"
+]
+
+alignment1 = ["Lawful ", "Neutral ", "Chaotic "]
+
+alignment2 = ["Good", "Neutral", "Evil"]
+
 race_list = [
     "Dwarf",
     "Elf",
@@ -16,9 +42,28 @@ CLASS_STATS = {
         "skills": [
             "Climb", "Craft", "Handle Animal", "Intimidate", "Jump", "Listen", "Ride", "Survival",
             "Swim"
-        ]
+        ],
+        "weapons": melee_weapons,
+        "armor": None,
+        "shields": shields,
+        "religions": {
+            0: None,
+            0.3: "Kord",
+            0.6: "Obad Hai",
+            0.9: "Erythnul"
+        },
+        "gold": {
+            "min": 40,
+            "max": 160
+        },
+        "alignment1": [
+            "Neutral", "Chaotic"
+        ],
+        "alignment2": alignment2,
     },
     "Bard": {
+        "health": 6,
+        "xp": 6,
         "skills": [
             "Appraise", "Balance", "Bluff", "Climb", "Concentration", "Craft", "Decipher Script",
             "Diplomacy", "Disguise", "Escape Artist", "Gather Information", "Hide", "Intimidate",
@@ -31,101 +76,104 @@ CLASS_STATS = {
         ]
     },
     "Cleric": {
+        "health": 8,
+        "xp": 2,
+        "skills": [
+            "Concentration", "Craft", "Diplomacy", "Heal", "Knowledge (arcana)",
+            "Knowledge (history)", "Knowledge (religion)", "Knowledge (the planes)",
+            "Profession", "Spellcraft"
+        ]
     },
     "Druid": {
+        "health": 8,
+        "xp": 4,
+        "skills": [
+            "Concentration", "Craft", "Diplomacy", "Handle Animal", "Heal", "Knowledge (nature)",
+            "Listen", "Profession", "Ride", "Spellcraft", "Spot", "Survival", "Swim"
+        ],
     },
     "Fighter": {
+        "health": 10,
+        "xp": 2,
+        "skills": [
+            "Climb", "Craft", "Handle Animal", "Intimidate", "Jump", "Ride", "Swim"
+        ]
     },
     "Monk": {
+        "health": 8,
+        "xp": 4,
+        "skills": [
+            "Balance", "Climb", "Concentration", "Craft", "Diplomacy", "Escape Artist",
+            "Hide", "Jump", "Knowledge (arcana)", "Knowledge (religion)", "Listen",
+            "Move Silently", "Perform", "Profession", "Sense Motive", "Spot", "Swim", "Tumble"
+        ]
     },
     "Paladin": {
+        "health": 10,
+        "xp": 2,
+        "skills": [
+            "Concentration", "Craft", "Diplomacy", "Handle Animal", "Heal",
+            "Knowledge (nobility and royalty)", "Knowledge (religion)", "Profession", "Ride",
+            "Sense Motive", "Spot", "Swim", "Tumble"
+        ]
     },
     "Ranger": {
-    },
-    "Sorcerer": {
+        "health": 8,
+        "xp": 6,
+        "skills": [
+            "Climb", "Concentration", "Craft", "Handle Animal", "Heal", "Hide", "Jump",
+            "Knowledge (local)", "Listen", "Move Silently", "Profession", "Ride", "Search", "Spot",
+            "Survival", "Swim", "Use Rope"
+        ]
     },
     "Rogue": {
+        "health": 6,
+        "xp": 8,
+        "skills": [
+            "Appraise", "Balance", "Bluff", "Climb", "Craft", "Decipher Script", "Diplomacy",
+            "Disable Device", "Disguise", "Escape Artist", "Forgery", "Gather Information", "Hide",
+            "Intimidate", "Jump", "Knowledge (local)", "Listen", "Move Silently", "Open Lock",
+            "Perform", "Profession", "Search", "Sense Motive", "Sleight of Hand", "Spot", "Swim",
+            "Tumble", "Use Magic Device", "Use Rope"
+        ]
+    },
+    "Sorcerer": {
+        "health": 4,
+        "xp": 2,
+        "skills": [
+            "Bluff", "Concentration", "Craft", "Knowledge (arcana)", "Profession", "Spellcraft"
+        ]
     },
     "Wizard": {
+        "health": 4,
+        "xp": 2,
+        "skills": [
+            "Concentration", "Craft", "Decipher Script", "Knowledge (Arcana)",
+            "Knowledge (Architecture and Engineering)", "Knowledge (Dungeoneering)",
+            "Knowledge (Geography)", "Knowledge (History)", "Knowledge (Local)",
+            "Knowledge (Nature)", "Knowledge (Nobility and Royalty)", "Knowledge (Religion)",
+            "Knowledge (The Planes)", "Spellcraft", "Profession"
+        ]
     }
 }
 
 
-skill_list = {
-
-    "Bard": [
-        "Appraise", "Balance", "Bluff", "Climb", "Concentration", "Craft", "Decipher Script",
-        "Diplomacy", "Disguise", "Escape Artist", "Gather Information", "Hide", "Intimidate",
-        "Jump", "Knowledge (arcana)", "Knowledge (architecture and engineering)",
-        "Knowledge (dungeoneering)", "Knowledge (geography)", "Knowledge (history)",
-        "Knowledge (local)", "Knowledge (nature)", "Knowledge (nobility and royalty)",
-        "Knowledge (religion)", "Knowledge (the planes)", "Listen", "Move Silently",
-        "Perform", "Profession", "Ride", "Search", "Sense Motive", "Sleight of Hand",
-        "Speak Language", "Spellcraft", "Swim", "Tumble", "Use Magic Device"
-    ],
-    "Cleric": [
-        "Concentration", "Craft", "Diplomacy", "Heal", "Knowledge (arcana)", "Knowledge (history)",
-        "Knowledge (religion)", "Knowledge (the planes)", "Profession", "Spellcraft"
-    ],
-    "Druid": [
-        "Concentration", "Craft", "Diplomacy", "Handle Animal", "Heal", "Knowledge (nature)",
-        "Listen", "Profession", "Ride", "Spellcraft", "Spot", "Survival", "Swim"
-    ],
-    "Fighter": [
-        "Climb", "Craft", "Handle Animal", "Intimidate", "Jump", "Ride", "Swim"
-    ],
-    "Monk": [
-        "Balance", "Climb", "Concentration", "Craft", "Diplomacy", "Escape Artist", "Hide", "Jump",
-        "Knowledge (arcana)", "Knowledge (religion)", "Listen", "Move Silently", "Perform",
-        "Profession", "Sense Motive", "Spot", "Swim", "Tumble"
-    ],
-    "Paladin": [
-        "Concentration", "Craft", "Diplomacy", "Handle Animal", "Heal",
-        "Knowledge (nobility and royalty)", "Knowledge (religion)", "Profession", "Ride",
-        "Sense Motive", "Spot", "Swim", "Tumble"
-    ],
-    "Ranger": [
-        "Climb", "Concentration", "Craft", "Handle Animal", "Heal", "Hide", "Jump",
-        "Knowledge (local)", "Listen", "Move Silently", "Profession", "Ride", "Search", "Spot",
-        "Survival", "Swim", "Use Rope"
-    ],
-    "Rogue": [
-        "Appraise", "Balance", "Bluff", "Climb", "Craft", "Decipher Script", "Diplomacy",
-        "Disable Device", "Disguise", "Escape Artist", "Forgery", "Gather Information", "Hide",
-        "Intimidate", "Jump", "Knowledge (local)", "Listen", "Move Silently", "Open Lock",
-        "Perform", "Profession", "Search", "Sense Motive", "Sleight of Hand", "Spot", "Swim",
-        "Tumble", "Use Magic Device", "Use Rope"
-    ],
-    "Sorcerer": [
-        "Bluff", "Concentration", "Craft", "Knowledge (arcana)", "Profession", "Spellcraft"
-    ],
-    "Wizard": [
-        "Concentration", "Craft", "Decipher Script", "Knowledge (Arcana)",
-        "Knowledge (Architecture and Engineering)", "Knowledge (Dungeoneering)",
-        "Knowledge (Geography)", "Knowledge (History)", "Knowledge (Local)",
-        "Knowledge (Nature)", "Knowledge (Nobility and Royalty)", "Knowledge (Religion)",
-        "Knowledge (The Planes)", "Spellcraft", "Profession"
-    ]
-}
-
-class_health = {"Bard": 6, "Cleric": 8, "Druid": 8, "Fighter": 10, "Monk": 8, "Paladin": 10, "Ranger": 8, "Sorcerer": 4, "Rogue": 6, "Wizard": 4}
-class_xp = {"Bard": 6, "Cleric": 2, "Druid": 4, "Fighter": 2, "Monk": 4, "Paladin": 2, "Ranger": 6, "Sorcerer": 2, "Rogue": 8, "Wizard": 2}
-alignment1 = ["Lawful ", "Neutral ", "Chaotic "]
-alignment2 = ["Good", "Neutral", "Evil"]
-niche_feats = ["Combat Experience (int 13)", "Dodge (dex 13)", "Power Attack (str 13)", "Simple Weapon Proficency (druids, monks, rogues, and wizards)", "Spell Mastery (Wizard)", "Two weapon fighting (Dex 15)"]
-feats = [
-    "Acrobatic", "Agile", "Alertness", "Animal Affinity", "Armor Proficency", "Athletic", "Blind Fight", "Combat Casting", "Combat Reflexes", "Deceitful", "Deft Hands", "Diligent", "Endurance", "Eschew Materials",
-    "Great Fortitude", "Improved Counterspell", "Improved Initiative", "Improved Unarmed Strike", "Investigator", "Iron Will", "Lightning Reflexes", "Magical Aptitude", "Martial Weapon Proficency", "Negotiator",
-    "Nimble Fingers", "Persuasive", "Point Blank Shot", "Run", "Self Sufficent", "Skill Focus", "Spell Focus", "Spell Penetration", "Stealthy", "Toughness", "Track"
+niche_feats = [
+    "Combat Experience (int 13)", "Dodge (dex 13)", "Power Attack (str 13)",
+    "Simple Weapon Proficency (druids, monks, rogues, and wizards)",
+    "Spell Mastery (Wizard)", "Two weapon fighting (Dex 15)"
 ]
 
-melee_weapons = ["Club", "Dagger", "Javelin", "Light Mace", "Heavy Mace", "Short Spear", "Sickle", "Spear", "Spiked Gauntlet", "Great Club", "Morningstar", "Quarterstaff", "Scythe"]
-ranged_weapons = ["Light Crossbow", "Sling", "Heavy Crossbow"]
+feats = [
+    "Acrobatic", "Agile", "Alertness", "Animal Affinity", "Armor Proficency", "Athletic",
+    "Blind Fight", "Combat Casting", "Combat Reflexes", "Deceitful", "Deft Hands",
+    "Diligent", "Endurance", "Eschew Materials", "Great Fortitude", "Improved Counterspell",
+    "Improved Initiative", "Improved Unarmed Strike", "Investigator", "Iron Will",
+    "Lightning Reflexes", "Magical Aptitude", "Martial Weapon Proficency", "Negotiator",
+    "Nimble Fingers", "Persuasive", "Point Blank Shot", "Run", "Self Sufficent",
+    "Skill Focus", "Spell Focus", "Spell Penetration", "Stealthy", "Toughness", "Track"
+]
 
-armor = ["Padded", "Leather", "Padded Leather", "Chain Shirt", "Hide", "Scalemail", "Chainmail", "Breastplate", "Splintmail", "Bandedmail", "Half Plate"]
-shields = ["Light Wooden", "Light Steel", "Heavy Wooden", "Heavy Steel", "Buckler"]
-
-religions = ["Heironeous", "Moradin", "Yondalla", "Ehlonna", "Garl Glittergold", "Pelor", "Corellon Larethian", "Kord", "Wee Jas", "St. Cuthbert", "Boccob", "Fharlanghn", "Obad Hai", "Olidammara", "Hextor", "Nerull", "Vecna", "Erythnul", "Gruumsh"]
 
 religion_domains = {
     "Boccob": ["Knowledge", "Magic", "Trickery"],
